@@ -46,7 +46,7 @@
 
 .profile-container ul{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 24px;
     list-style: none;
 }
@@ -84,4 +84,38 @@
     color: #737380;
     line-height: 21px;
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .profile-container header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .profile-container header .header-first-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .profile-container header span {
+        margin-bottom: 20px;
+    }
+
+    .profile-container header .button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-container header button {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .profile-container header {
+        display: inline-block;
+    }
 }

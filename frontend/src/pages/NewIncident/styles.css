@@ -46,3 +46,15 @@
 .new-incident-container .content form textarea {
     margin-top: 8px;
 }
+
+@media (max-width: 768px) {
+    .new-incident-container .content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .new-incident-container .content img {
+        width: 50%;
+    }
+}
